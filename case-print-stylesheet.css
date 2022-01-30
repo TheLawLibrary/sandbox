@@ -1,0 +1,109 @@
+@font-face {
+  font-family:"OldStandard Italic";
+  src: url("fonts/OldStandard/OldStandard-Italic.otf");
+}
+
+@font-face {
+  font-family:"OldStandard Regular";
+  src: url("fonts/OldStandard/OldStandard-Regular.otf");
+}
+
+@font-face {
+  font-family:"OldStandard Bold";
+  src: url("fonts/OldStandard/OldStandard-Bold.otf");
+}
+
+@font-face {
+  font-family:"OldStandard Bold-Italic";
+  src: url("fonts/OldStandard/OldStandard-BoldItalic.otf");
+}
+
+h1.caption {
+  text-align:center;
+  font-size:13pt;
+  font-family:"OldStandard Regular", serif;
+  font-weight:normal;
+}
+i {
+  font-family:"OldStandard Italic", serif;
+}
+p.lowercourt {
+  font-family:"OldStandard Regular", serif;
+  text-align:center;
+  text-transform:uppercase;
+  font-size:9pt;
+}
+p {
+  font-family:"OldStandard Regular", serif;
+  font-size:11pt;
+}
+p.op {
+  font-family:"OldStandard Regular", serif;
+  font-size:9pt;
+}
+body {
+  text-align:justify;
+  text-justify:auto;
+}
+.smallcaps {
+  font-variant-caps: small-caps;
+}
+
+.footnote {
+  float:footnote;
+}
+
+.page {
+  background-color:springgreen;
+  border-style:solid;
+  border-color:forestgreen;
+  border-width:1px;
+  font-family:"OldStandard Bold-Italic", serif;
+  font-size:10pt;
+}
+
+.caseno {
+  font-family:"OldStandard Regular", serif;
+  font-size:9pt;
+  
+}
+
+.date {
+  font-family:"OldStandard Regular", serif;
+  font-size:9pt;
+  text-align:center
+}
+
+@media print {
+  @page:left {
+    size: letter;
+    margin: 2in;
+    @top-left {
+      padding-top: 1.5in;
+      content: counter(page);
+      font-family:"OldStandard Regular", serif;
+      font-size: 10pt;
+    }  
+  }
+  @page:right {
+    size:letter;
+    margin: 2in;
+    @top-right {
+      padding-top: 1.5in;
+      content: counter(page);
+      font-family:"OldStandard Regular", serif;
+      font-size: 10pt;
+    }
+  }
+  @page {
+    @footnote {
+      float:bottom;
+      font-size: 10pt;
+      font-family:"OldStandard Regular", serif;
+    }
+  }
+  p {
+    text-indent:0.1in;
+  }  
+}
+ 
