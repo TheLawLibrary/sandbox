@@ -1,0 +1,28 @@
+@media print {
+  @page:left {
+    size: letter;
+    margin: 1in;
+    @top-left {
+      /* padding-top: 1.5in; */
+      content: counter(page);
+      font-family:"OldStandard Regular", serif;
+      font-size: 10pt;
+    }  
+  }
+  @page:right {
+    size:letter;
+    margin: 1in;
+    @top-right {
+     /* padding-top: 1.5in; */
+      content: counter(page);
+      font-family:"OldStandard Regular", serif;
+      font-size: 10pt;
+    }
+  }
+  @page {
+    @footnote {
+      float:bottom;
+      font-size: 10pt;
+      font-family:"OldStandard Regular", serif;
+    }
+  }
